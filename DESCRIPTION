@@ -1,0 +1,15 @@
+Package: autoNumCaptions
+Type: Package
+Title: Provides Functions That Add Appropriate Numbers to Figures and Tables
+Version: 0.1.0
+Author: Keaton Stagaman
+Maintainer: The package maintainer <kstagaman@gmail.com>
+Description: This package is meant to make it easy to auto-number figures and tables in a long script (such as an R-markdown Document) and incorporate them directly into figures and tables. Each time the package is loaded, it renumbers figures and tables as they are created in the script, so that reordering figures does not require renumbering by hand. This package tracks figure, table, supplemental figure, and supplemental table numbers separately.
+    Furthermore, a long caption will run out of the plot in ggplot (because it doesn't wrap text). The caption-creating functions here will add line breaks to the caption text that wrap it. The maximum caption width (in columns) can be set by the user.
+License: GPL-3.0-only
+Encoding: UTF-8
+LazyData: true
+Suggests:
+  ggplot2,
+  knitr
+RoxygenNote: 6.1.99.9001
