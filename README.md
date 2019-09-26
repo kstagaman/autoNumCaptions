@@ -4,13 +4,6 @@ figures
 Keaton Stagaman
 6/25/2019
 
-<style>
-caption {
-      font-size: 12px;
-      text-align: left;
-    }
-</style>
-
 ## Installation
 
     # install.packages("devtools")
