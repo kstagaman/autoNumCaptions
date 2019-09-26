@@ -31,5 +31,5 @@ ggplot(example.data, aes(x = X, y = Y)) +
   gg_figure_caption(caption = "This is a figure")
 }
 \seealso{
-\code{\link{start.tracking}}, \code{\link{ggplot2::labs}}, \code{\link{figure.caption}}, \code{\link{supp.fig.caption}}
+\code{\link{ggplot2::labs}}, \code{\link{figure.caption}}, \code{\link{supp.fig.caption}}
 }

@@ -3,7 +3,7 @@
 #' Create an auto-numbered, wrapped figure caption
 #' @param caption A string containing the caption text.
 #' @param caption.width A positive integer giving the target column for wrapping lines in the output. Defaults to 98
-#' @seealso \code{\link{start.tracking}}, \code{\link{wrap.caption}}, \code{\link{supp.fig.caption}}
+#' @seealso \code{\link{wrap.caption}}, \code{\link{supp.fig.caption}}
 #' @export
 #' @examples
 #' data(example_data)

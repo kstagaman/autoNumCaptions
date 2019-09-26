@@ -20,5 +20,5 @@ data(example_data)
 plot(example.data$X, example.data$Y, sub = figure.caption("This is a figure"))
 }
 \seealso{
-\code{\link{start.tracking}}, \code{\link{wrap.caption}}, \code{\link{supp.fig.caption}}
+\code{\link{wrap.caption}}, \code{\link{supp.fig.caption}}
 }

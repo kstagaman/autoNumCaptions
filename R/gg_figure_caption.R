@@ -5,7 +5,7 @@
 #' @param supplemental Is this a supplemental figure? Defaults to FALSE.
 #' @param s.numbers If it is a supplmental figure, how to you want it formatted: "Supplemental Figure 1" (FALSE) or "Figure S1" (TRUE)? Defaults to FALSE.
 #' @param caption.width A positive integer giving the target column for wrapping lines in the output. Defaults to 98
-#' @seealso \code{\link{start.tracking}}, \code{\link{ggplot2::labs}}, \code{\link{figure.caption}}, \code{\link{supp.fig.caption}}
+#' @seealso \code{\link{ggplot2::labs}}, \code{\link{figure.caption}}, \code{\link{supp.fig.caption}}
 #' @export
 #' @examples
 #' data(example_data)

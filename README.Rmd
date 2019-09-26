@@ -1,0 +1,103 @@
+---
+title: "autoNumCaptions: A package for auto-numbering html and markdown figures"
+author: "Keaton Stagaman"
+date: "6/25/2019"
+output: github_document
+html_preview: true
+always_allow_html: yes
+---
+```{r results="asis", echo=FALSE}
+cat("
+<style>
+caption {
+      font-size: 12px;
+      text-align: left;
+    }
+</style>
+")
+```
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(kableExtra)
+library(autoNumCaptions)
+df1 <- data.frame(X = 1:10, Y = (1:10)^2)
+set.seed(42)
+df2 <- data.frame(
+  A = c("red", "green", "blue"), 
+  B = round(rnorm(3), 4), 
+  C = c("TRUE", "FALSE", "TRUE"),
+  D = seq(0, 10, length.out = 3),
+  E = c("North", "South", "West"),
+  F = round(c(pi, pi^2, pi^pi), 4),
+  G = round(rgamma(3, shape = 1), 4), 
+  H = round(rbinom(3, 10, 0.5), 4)
+)
+```
+
+## Installation
+
+```
+# install.packages("devtools")
+devtools::install_github("kstagaman/autoNumCaptions")
+```
+
+## Usage
+
+When generating HTML or Markdown files using `knitr`, utilizing the `caption` argument does not auto-number the figures or tables (as it does when producing a PDF through LaTeX). This package allows one to add auto-numbered captions directly to plots, ggplots, and tables. Furthermore, because captions are not automattically wrapped to fit in the plot space (`ggplot` doesn't wrap caption text), these functions wrap the text to a length (in columns) that can be specified by the user.
+
+```{r ggplot-example}
+my.theme <- theme_update(plot.caption = element_text(hjust = 0, vjust = 1, size = 10))
+ggplot(df1, aes(x = X, y = Y)) +
+  geom_point() +
+  gg_figure_caption(caption = "This figure demonstrates how to add a caption to a ggplot")
+```
+
+```{r plot-example}
+plot(
+  df1$X, 
+  df1$Y, 
+  sub = figure.caption("This figure demonstrates how to add a caption to a base plot")
+  )
+```
+
+```{r supp-ggplot-examples}
+ggplot(df1, aes(x = X, y = Y)) +
+  geom_point() +
+  gg_figure_caption(
+    caption = "This figure demonstrates how to add a caption to a supplemental ggplot",
+    supplemental = TRUE
+    )
+
+ggplot(df1, aes(x = X, y = Y)) +
+  geom_point() +
+  gg_figure_caption(
+    caption = "This figure demonstrates how to add a caption to a supplemental ggplot and use \"S\" in front of the number instead of \"Supplemental\" in front of \"Figure\"",
+    supplemental = TRUE,
+    s.numbers = TRUE
+    )
+```
+
+```{r table-example}
+kable(
+  df2, 
+  caption = table.caption("This table demonstrates how to add a caption to a kable table")
+  ) %>% kable_styling(font_size = 12, bootstrap_options = "striped", full_width = T)
+```
+
+```{r supp-table-examples}
+kable(
+  df2, 
+  caption = supp.tbl.caption(
+    "This table demonstrates how to add a caption to a supplemental kable table"
+    )
+  ) %>% kable_styling(font_size = 12, bootstrap_options = "striped")
+
+kable(
+  df2, 
+  caption = supp.tbl.caption(
+    "This table demonstrates how to add a caption to a supplemental kable table and use \"S\" in front of the number instead of \"Supplemental\" in front of \"Table\"",
+    s.numbers = TRUE
+    )
+  ) %>% kable_styling(font_size = 12, bootstrap_options = "striped")
+```

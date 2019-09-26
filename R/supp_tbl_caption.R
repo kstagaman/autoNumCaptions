@@ -4,7 +4,7 @@
 #' @param caption A string containing the caption text.
 #' @param s.numbers If it is a supplmental figure, how to you want it formatted: "Supplemental Table 1" (FALSE) or "Table S1" (TRUE)? Defaults to FALSE.
 #' @param caption.width A positive integer giving the target column for wrapping lines in the output. Defaults to 98
-#' @seealso \code{\link{start.tracking}}, \code{\link{table.caption}}, \code{\link{wrap.caption}}
+#' @seealso \code{\link{table.caption}}, \code{\link{wrap.caption}}
 #' @export
 #' @examples
 #' data(example_data)

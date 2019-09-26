@@ -22,5 +22,5 @@ data(example_data)
 knitr::kable(example.data, format = "latex", caption = supp.tbl.caption("This is a table"))
 }
 \seealso{
-\code{\link{start.tracking}}, \code{\link{table.caption}}, \code{\link{wrap.caption}}
+\code{\link{table.caption}}, \code{\link{wrap.caption}}
 }
