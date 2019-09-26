@@ -1,4 +1,5 @@
-autoNumCaptions: A package for auto-numbering html and markdown figures
+autoNumCaptions: An R package for auto-numbering html and markdown
+figures
 ================
 Keaton Stagaman
 6/25/2019

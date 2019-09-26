@@ -1,5 +1,5 @@
 ---
-title: "autoNumCaptions: A package for auto-numbering html and markdown figures"
+title: "autoNumCaptions: An R package for auto-numbering html and markdown figures"
 author: "Keaton Stagaman"
 date: "6/25/2019"
 output: github_document
