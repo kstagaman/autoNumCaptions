@@ -2,6 +2,7 @@
 
 export(figure.caption)
 export(gg_figure_caption)
+export(set.tracking.nums)
 export(supp.fig.caption)
 export(supp.tbl.caption)
 export(table.caption)
