@@ -1,7 +1,8 @@
 Package: autoNumCaptions
 Type: Package
 Title: Provides Functions That Add Appropriate Numbers to Figures and Tables
-Version: 0.1.0
+Version: 0.2
+Date: 2022-04-28
 Author: Keaton Stagaman
 Maintainer: The package maintainer <kstagaman@gmail.com>
 Description: This package is meant to make it easy to auto-number figures and tables in a long script (such as an R-markdown Document) and incorporate them directly into figures and tables. Each time the package is loaded, it renumbers figures and tables as they are created in the script, so that reordering figures does not require renumbering by hand. This package tracks figure, table, supplemental figure, and supplemental table numbers separately.
@@ -11,5 +12,6 @@ Encoding: UTF-8
 LazyData: true
 Suggests:
   ggplot2,
-  knitr
+  knitr,
+  stringr
 RoxygenNote: 6.1.99.9001
