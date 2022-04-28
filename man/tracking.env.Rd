@@ -4,7 +4,9 @@
 \name{tracking.env}
 \alias{tracking.env}
 \title{Tracking Environment}
-\format{An object of class \code{environment} of length 4.}
+\format{
+An object of class \code{environment} of length 4.
+}
 \usage{
 tracking.env
 }

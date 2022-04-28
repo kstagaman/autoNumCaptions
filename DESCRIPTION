@@ -14,4 +14,4 @@ Suggests:
   ggplot2,
   knitr,
   stringr
-RoxygenNote: 6.1.99.9001
+RoxygenNote: 7.1.2
