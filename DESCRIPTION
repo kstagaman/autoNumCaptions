@@ -1,7 +1,7 @@
 Package: autoNumCaptions
 Type: Package
 Title: Provides Functions That Add Appropriate Numbers to Figures and Tables
-Version: 0.2
+Version: 0.3
 Date: 2022-04-28
 Author: Keaton Stagaman
 Maintainer: The package maintainer <kstagaman@gmail.com>
@@ -14,4 +14,4 @@ Suggests:
   ggplot2,
   knitr,
   stringr
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
